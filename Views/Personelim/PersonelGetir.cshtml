@@ -1,0 +1,20 @@
+﻿@model ProjeCore.Models.Personel
+
+@{
+    ViewData["Title"] = "PersonelGuncelle";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+
+<br/>
+@using(Html.BeginForm("PersonelGuncelle","Personelim",FormMethod.Post))
+{
+    <b>Personel ID</b>
+    @Html.TextBoxFor(x=>x.PersonelId, new {@class="form-control"})
+    <br/>
+    <b>Personel Adı</b>
+    @Html.TextBoxFor(x=>x.Ad, new {@class="form-control"})
+    <br/>
+    <button class="btn btn-default" style="background-color:#ff6a00; color:white;">Personel Güncelle</button>
+}
+
